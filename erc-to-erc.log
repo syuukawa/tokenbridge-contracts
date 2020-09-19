@@ -1,0 +1,137 @@
+[zhouhe@zhous-MBP-2:] ~/blockchain/tokenbridge/tokenbridge-contracts $  docker run -ti --rm --env-file erc-to-erc.config \
+>      poanetwork/tokenbridge-contracts:latest deploy.sh
+Bridge contract deployment started
+
+> deploy@1.0.0 deploy /contracts/deploy
+> if test "$NOFLAT" != "true" ; then cd ..; npm run flatten; cd deploy; fi && node deploy.js
+
+Bridge mode: AMB_ERC_TO_ERC
+
+[Home] Deploying Bridge Mediator storage
+
+pending txHash 0x869dfa3083a3cf267cb861abdef3f48310dc4fcfd80b93d35c841f105d634e52
+It was not possible to verify 0xf5975aace8673ee3a303eb585733d9bdcf9ed6d7 in blockscout
+[Home] Bridge Mediator Storage:  0xF5975aAce8673EE3A303eb585733d9BdCf9eD6d7
+
+[Home] Deploying Bridge Mediator implementation
+
+pending txHash 0xd99577e51fb87a69a08b95f80822494cb99f641bd326fb141d62570df40e791e
+It was not possible to verify 0x8bcbe5a38010c52939b2f124998c90a773e52486 in blockscout
+[Home] Bridge Mediator Implementation:  0x8bcbE5a38010c52939B2f124998C90a773e52486
+
+[Home] Hooking up Mediator storage to Mediator implementation
+pending txHash 0x23d2374ebae6b282a03c9b854e1b17fe017286526b62011a45d6dd74b321a8ef
+
+[Home] deploying Bridgeable token
+pending txHash 0xff019652361051ce7eb75fc1ed8d4e6edc83b3ae944d6b65c2677a32fefd9c4d
+It was not possible to verify 0xfb53e551d38d404fd78f6d3628067a6f2898008e in blockscout
+[Home] Bridgeable Token:  0xFb53E551d38D404fD78F6d3628067a6f2898008E
+
+[Home] Set Bridge Mediator contract on Bridgeable token
+pending txHash 0x965417729d6180ddbc2ae3f263d7fa7e050ba730bc2ae6595a8f3ce3d9d54b17
+[Home] Transferring ownership of Bridgeable token to Bridge Mediator contract
+pending txHash 0x7349604f548c34b4b8cd36c925b690725c563e94e97369a3f71d52c750c448cb
+
+Home part of ERC677-to-ERC677 bridge deployed
+
+
+[Foreign] Deploying Bridge Mediator storage
+
+pending txHash 0xcfd269b59c40d21e7612d7b5727ba16a89516c7d3eb27a13271c69d7290dc7cc
+It was not possible to verify 0x9952b09216320f85aecc0caaf48fee4705f423c7 in etherscan
+[Foreign] Bridge Mediator Storage:  0x9952b09216320f85AECc0cAaF48feE4705f423c7
+
+[Foreign] Deploying Bridge Mediator implementation
+
+pending txHash 0x5aa9f799f7802e65145936f0ccdccd623ae6be8df658b895380802959969299c
+It was not possible to verify 0x8267db128cc9817f58097cc257c91a21314f91e6 in etherscan
+[Foreign] Bridge Mediator Implementation:  0x8267db128cC9817f58097cc257C91a21314f91E6
+
+[Foreign] Hooking up Mediator storage to Mediator implementation
+pending txHash 0xcb0039552b7e949b4d97340a6ac485e131b8b7e3bb1d13f7bf9519bb7342a5a2
+
+Foreign part of ERC677-to-ERC677 bridge deployed
+
+
+[Home] Initializing Bridge Mediator with following parameters:
+
+
+    AMB contract: 0x2506651917AFe4ee12012EA195263a08e2A6a9de, 
+    Mediator contract: 0x9952b09216320f85AECc0cAaF48feE4705f423c7, 
+    Token contract: 0xFb53E551d38D404fD78F6d3628067a6f2898008E,
+    DAILY_LIMIT : 100000000000000000000000 which is 100000 in eth,
+    MAX_AMOUNT_PER_TX: 10000000000000000000000 which is 10000 in eth,
+    MIN_AMOUNT_PER_TX: 10000000000000000 which is 0.01 in eth,
+    EXECUTION_DAILY_LIMIT : 500000000000000000000000 which is 500000 in eth,
+    EXECUTION_MAX_AMOUNT_PER_TX: 100000000000000000000000 which is 100000 in eth,
+    FOREIGN_TO_HOME_DECIMAL_SHIFT: 0,
+    MEDIATOR_REQUEST_GAS_LIMIT : 500000, 
+    OWNER: 0xE0106C5A09e74646c744fcfe309FCDDBC39804A3
+  
+pending txHash 0x094dfadceae9433706567b612270f6f7e29dd1d16672da049dc2267d19ac780b
+Transferring bridge mediator proxy ownership to upgradeability admin
+pending txHash 0x92803f7857605910f149a935c0391088b157aa7486b4488bd86caef7363aa70b
+
+[Foreign] Initializing Bridge Mediator with following parameters:
+
+
+    AMB contract: 0x427701093e6cae095f09C15d7687EE3F99093D53, 
+    Mediator contract: 0xF5975aAce8673EE3A303eb585733d9BdCf9eD6d7, 
+    Token contract: 0x41c16473b12211892c813f52815f700440471aa0,
+    DAILY_LIMIT : 500000000000000000000000 which is 500000 in eth,
+    MAX_AMOUNT_PER_TX: 100000000000000000000000 which is 100000 in eth,
+    MIN_AMOUNT_PER_TX: 10000000000000000 which is 0.01 in eth,
+    EXECUTION_DAILY_LIMIT : 100000000000000000000000 which is 100000 in eth,
+    EXECUTION_MAX_AMOUNT_PER_TX: 10000000000000000000000 which is 10000 in eth,
+    FOREIGN_TO_HOME_DECIMAL_SHIFT: 0,
+    MEDIATOR_REQUEST_GAS_LIMIT : 500000, 
+    OWNER: 0xE0106C5A09e74646c744fcfe309FCDDBC39804A3
+  
+pending txHash 0xd4e950793c291ab3d825acaa2049a7fbc07b996efeaa2dc89aee85a33da9ff8c
+Transferring bridge mediator proxy ownership to upgradeability admin
+pending txHash 0xbf2292085e9f60cb3f894e8ef33472c2f22e1227a7bbefded250899cd491816d
+
+Deployment has been completed.
+
+
+[   Home  ] Bridge Mediator: 0xF5975aAce8673EE3A303eb585733d9BdCf9eD6d7
+[   Home  ] ERC677 Bridgeable Token: 0xFb53E551d38D404fD78F6d3628067a6f2898008E
+[ Foreign ] Bridge Mediator: 0x9952b09216320f85AECc0cAaF48feE4705f423c7
+[ Foreign ] ERC677 Token: 0x41c16473b12211892c813f52815f700440471aa0
+Contracts Deployment have been saved to `bridgeDeploymentResults.json`
+{
+    "homeBridge": {
+        "homeBridgeMediator": {
+            "address": "0xF5975aAce8673EE3A303eb585733d9BdCf9eD6d7"
+        },
+        "bridgeableErc677": {
+            "address": "0xFb53E551d38D404fD78F6d3628067a6f2898008E"
+        }
+    },
+    "foreignBridge": {
+        "foreignBridgeMediator": {
+            "address": "0x9952b09216320f85AECc0cAaF48feE4705f423c7"
+        }
+    }
+}
+
+
+
+docker run -ti -p 8080:8080 -e PORT=8080 -e REACT_APP_INFURA_KEY="945c07d86744491cb15c4547227b2dfa" —rm bw-plugin_wallet:latest
+
+docker run -ti -p 8080:8080 -e PORT=8080 -e REACT_APP_INFURA_KEY="945c07d86744491cb15c4547227b2dfa" —rm bw-plugin_wallet:latest
+
+
+docker run -ti -p 8080:8080 -e PORT=8080 -e REACT_APP_INFURA_KEY=945c07d86744491cb15c4547227b2dfa --rm tokenbridge-burner-wallet-plugin_wallet:latest
+
+docker run -p 8080:8080 -e PORT=8080 -e REACT_APP_INFURA_KEY=945c07d86744491cb15c4547227b2dfa --rm tokenbridge-burner-wallet-plugin_wallet:latest
+
+
+docker run -itd --name sokol-kovan -p 8080:8080 -e PORT=8080 -e REACT_APP_INFURA_KEY=945c07d86744491cb15c4547227b2dfa tokenbridge-burner-wallet-plugin_wallet:latest
+
+git remote add origin https://github.com/syuukawa/tokenbridge-burner-wallet-plugin.git
+
+
+
+
+ 
