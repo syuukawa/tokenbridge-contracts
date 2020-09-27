@@ -1,0 +1,123 @@
+docker run -it --env-file ela-kovan-amb.config poanetwork/tokenbridge-contracts deploy.sh
+Bridge contract deployment started
+
+> deploy@1.0.0 deploy /contracts/deploy
+> if test "$NOFLAT" != "true" ; then cd ..; npm run flatten; cd deploy; fi && node deploy.js
+
+Bridge mode: ARBITRARY_MESSAGE
+========================================
+Deploying Arbitrary Message Bridge at Home
+========================================
+
+deploying storage for home validators
+pending txHash 0xcbd68f123d8018989247f41da78da6ab451e6c031301ce9ef858e98b2548cb04
+[Home] BridgeValidators Storage:  0xf36cc59e57c09a69f50b0594aACEB0316a489eCE
+
+deploying implementation for home validators
+pending txHash 0xc62995a34940b03874903569183ec67aa8ae5ef0c4c30c242276b7b680d94e88
+[Home] BridgeValidators Implementation:  0x3a06562872Bb93D224Cf6dcAEeeDE51904302D1B
+
+hooking up eternal storage to BridgeValidators
+pending txHash 0xb87d5381e9a3c1338d85708bd3b715e12d64657aabd39500b301d81bcfc673ef
+
+initializing Home Bridge Validators with following parameters:
+
+REQUIRED_NUMBER_OF_VALIDATORS: 1, VALIDATORS: 0x5dF1239CCC3D888bA6C95c55E20307FB0581871F, VALIDATORS_OWNER: 0xB37d93386BFF61dA03B7d8856F8479dAB0904a0d
+pending txHash 0x4dd89f06e0a2c269f2937a1a9978950043c866d66477154455e2ddddaedeb0a4
+transferring proxy ownership to multisig for Validators Proxy contract
+pending txHash 0x1e9c8d9e2df860a838b76b5ff50206c81563f6e1c5c63b9fad9825f09829afb8
+
+deploying HomeAMBridge storage
+
+pending txHash 0x3c014877c8af94f11626cc1ed1821662dd66210b48039d8e230b534e65355f42
+[Home] HomeAMBridge Storage:  0x98154cffAF42803a8420fB1CC7b6BF78f8389F21
+
+deploying HomeAMBridge implementation
+
+pending txHash 0x3c064d663c75e72b237c3d92cb3778f35dc6ff44bb33099c9be598d2a036ee69
+[Home] HomeAMBridge Implementation:  0x710C7A58acaE612fDb3dc68C4B6CcC64D2672BD8
+
+hooking up HomeAMBridge storage to HomeAMBridge implementation
+pending txHash 0x949c6461f7e858c77492f5e7cdcf49c7bf8135d9a8759af935922995436fa2d6
+
+initializing Home Bridge with following parameters:
+
+SOURCE_CHAIN_ID: 3, DESTINATION_CHAIN_ID: 42, Home Validators: 0xf36cc59e57c09a69f50b0594aACEB0316a489eCE,
+  HOME_MAX_AMOUNT_PER_TX (gas limit per call): 2000000,
+  HOME_GAS_PRICE: 5000000000, HOME_REQUIRED_BLOCK_CONFIRMATIONS : 1
+  
+pending txHash 0xaf8df8066c5d6623117e4ac2853601d56fd935780f8cc57b4cc79d027e900cee
+transferring proxy ownership to multisig for Home bridge Proxy contract
+pending txHash 0xcaf46855ce0bc05bc084d286accf393f74394cef98cf2bf4c7badd29ceda7207
+
+Deployment of Arbitrary Message Bridge at Home completed
+
+========================================
+Deploying Arbitrary Message Bridge at Foreign
+========================================
+
+deploying storage for foreign validators
+pending txHash 0xfa6b0b50e4a94d24bf3e782165af5e98afd59de408698ed2adfa56905194868f
+[Foreign] BridgeValidators Storage:  0xf36cc59e57c09a69f50b0594aACEB0316a489eCE
+
+deploying implementation for foreign validators
+pending txHash 0x244453efb1469ae9cc7508efcfe4eff1acd83c9cccc5cd3698ea4e0ee0becd30
+[Foreign] BridgeValidators Implementation:  0x3a06562872Bb93D224Cf6dcAEeeDE51904302D1B
+
+hooking up eternal storage to BridgeValidators
+pending txHash 0x8ccf23a3b6624305f6e8010a75d41e61ce080ef68e354c88067e995f87f05839
+
+initializing Foreign Bridge Validators with following parameters:
+
+REQUIRED_NUMBER_OF_VALIDATORS: 1, VALIDATORS: 0x5dF1239CCC3D888bA6C95c55E20307FB0581871F, VALIDATORS_OWNER: 0xB37d93386BFF61dA03B7d8856F8479dAB0904a0d
+pending txHash 0x7e14f05564487e1fa60d8ad2c64457dfb48729915912a05a91fe21d85954da3e
+
+Transferring ownership of ValidatorsProxy
+
+pending txHash 0x7f8f1f9f894756399361a30b68a80140b78ed6af1bbee94255b0b325b5caf764
+
+deploying ForeignAMBridge storage
+
+pending txHash 0xe9da55c85a2745bce1a664c3f58f1e527c669b3bc9fcbbcaf646e40253f16e91
+[Foreign] ForeignAMBridge Storage:  0x98154cffAF42803a8420fB1CC7b6BF78f8389F21
+
+deploying ForeignAMBridge implementation
+
+pending txHash 0x22d615b05922aeb5af37851eb54ead1db7f7e12bdb89c15c5920c1aae1d41026
+[Foreign] ForeignAMBridge Implementation:  0x710C7A58acaE612fDb3dc68C4B6CcC64D2672BD8
+
+hooking up ForeignAMBridge storage to ForeignAMBridge implementation
+pending txHash 0x83c1e4ec6d614d7a273bba64914b1d7f51929778b3451ae84d5c9248898f9153
+
+initializing Foreign Bridge with following parameters:
+
+
+initializing Foreign Bridge with following parameters:
+
+SOURCE_CHAIN_ID: 42, DESTINATION_CHAIN_ID: 3, Foreign Validators: 0xf36cc59e57c09a69f50b0594aACEB0316a489eCE,
+  FOREIGN_MAX_AMOUNT_PER_TX (gas limit per call): 2000000,
+  FOREIGN_GAS_PRICE: 10000000000, FOREIGN_REQUIRED_BLOCK_CONFIRMATIONS : 1
+  
+pending txHash 0x0add980247c054a5f2b27a0417e026bb48ce1346a758b7934a88ceec3fc9b11a
+transferring proxy ownership to multisig for Foreign bridge Proxy contract
+pending txHash 0xfda8149b7c007695cb64fa74f1a776f89a76a9c655a5fc3a37a1b7640937a152
+
+Deployment of Arbitrary Message Bridge at Foreign completed
+
+
+Deployment has been completed.
+
+
+[   Home  ] HomeBridge: 0x98154cffAF42803a8420fB1CC7b6BF78f8389F21 at block 2307635
+[ Foreign ] ForeignBridge: 0x98154cffAF42803a8420fB1CC7b6BF78f8389F21 at block 21136862
+Contracts Deployment have been saved to `bridgeDeploymentResults.json`
+{
+    "homeBridge": {
+        "address": "0x98154cffAF42803a8420fB1CC7b6BF78f8389F21",
+        "deployedBlockNumber": 2307635
+    },
+    "foreignBridge": {
+        "address": "0x98154cffAF42803a8420fB1CC7b6BF78f8389F21",
+        "deployedBlockNumber": 21136862
+    }
+}

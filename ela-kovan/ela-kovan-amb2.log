@@ -1,0 +1,131 @@
+docker run -it --env-file ela-kovan-amb2.config poanetwork/tokenbridge-contracts deploy.sh
+Bridge contract deployment started
+
+> deploy@1.0.0 deploy /contracts/deploy
+> if test "$NOFLAT" != "true" ; then cd ..; npm run flatten; cd deploy; fi && node deploy.js
+
+Bridge mode: ARBITRARY_MESSAGE
+========================================
+Deploying Arbitrary Message Bridge at Home
+========================================
+
+deploying storage for home validators
+pending txHash 0xef2a5db38e609d8de0725c756024f82e3c6761fe8591987c315bc93b70c0eb8f
+0xbe8cc31f1b4a96ede0d2aaa4bb789c424f225433 verified in blockscout
+[Home] BridgeValidators Storage:  0xbE8cC31f1b4A96eDE0D2aAa4Bb789c424f225433
+
+deploying implementation for home validators
+pending txHash 0x8fb8168d3bea3e66ca060666f438a93b666690e58d0f577f3c648e6d9582c063
+0xe32caf987e97edf4a2bb2948b12f0ff5b4ec76f1 verified in blockscout
+[Home] BridgeValidators Implementation:  0xE32CAf987e97EdF4a2bB2948B12f0fF5B4EC76f1
+
+hooking up eternal storage to BridgeValidators
+pending txHash 0x0190b1847f553ec990194620ff9d060f30efdccd698957362ee610fab1f5c448
+
+initializing Home Bridge Validators with following parameters:
+
+REQUIRED_NUMBER_OF_VALIDATORS: 1, VALIDATORS: 0x371b627E0698DD758898Af271a0a2bB1bF9eCE26, VALIDATORS_OWNER: 0xb3A0dd42D027623B0aD2eBBA2300a2ffd69eC178
+pending txHash 0x3f1fb31d0a28fb26f366b853dab9699e93649fd83df3e0e2545cfae9a9d30917
+transferring proxy ownership to multisig for Validators Proxy contract
+pending txHash 0xc784591114af729466e6eb1b8e0d4da5917214c7c852c29357e55c14c760808e
+
+deploying HomeAMBridge storage
+
+pending txHash 0x7861e48343de1e6ac4a30386736460d1415387734a4d1fe5fd83321e8499affd
+0x30156bd455dd0bb8b900907335d536dac2dbb206 verified in blockscout
+[Home] HomeAMBridge Storage:  0x30156BD455dD0BB8B900907335d536daC2Dbb206
+
+deploying HomeAMBridge implementation
+
+pending txHash 0x5255f639ecafa0785b5352204dbad4e3834cefd5f3fc3bca0e7f3b919251842b
+0x7b0957f2f288af1b26e500c6995e13870deb5c6f verified in blockscout
+[Home] HomeAMBridge Implementation:  0x7b0957f2F288Af1B26e500C6995e13870DeB5C6f
+
+hooking up HomeAMBridge storage to HomeAMBridge implementation
+pending txHash 0x6cee53f66204784df9d934b42786bd41494855905dc96b47a7d96498fc79c4c9
+
+initializing Home Bridge with following parameters:
+
+SOURCE_CHAIN_ID: 3, DESTINATION_CHAIN_ID: 42, Home Validators: 0xbE8cC31f1b4A96eDE0D2aAa4Bb789c424f225433,
+  HOME_MAX_AMOUNT_PER_TX (gas limit per call): 2000000,
+  HOME_GAS_PRICE: 5000000000, HOME_REQUIRED_BLOCK_CONFIRMATIONS : 1
+  
+pending txHash 0x24ddaf56cbb2d2c29372c8f64d77f4c6e2cc6cad9975487c6ea57f6bea5cbc74
+transferring proxy ownership to multisig for Home bridge Proxy contract
+pending txHash 0x789048b1ff8054be288befa34558d06b2d600ba3074652847cd774d1b33cd06b
+
+Deployment of Arbitrary Message Bridge at Home completed
+
+========================================
+Deploying Arbitrary Message Bridge at Foreign
+========================================
+
+deploying storage for foreign validators
+pending txHash 0xa2e46890cb09f99e37a46d31b689dd6b11fb594f58c4414e2fa6a3f506af0b3a
+It was not possible to verify 0xbe8cc31f1b4a96ede0d2aaa4bb789c424f225433 in etherscan
+[Foreign] BridgeValidators Storage:  0xbE8cC31f1b4A96eDE0D2aAa4Bb789c424f225433
+
+deploying implementation for foreign validators
+pending txHash 0xe3c7675e62d71f8ace47bed0a0916594dc588498af5df08ac3dec93895e672ef
+It was not possible to verify 0xe32caf987e97edf4a2bb2948b12f0ff5b4ec76f1 in etherscan
+[Foreign] BridgeValidators Implementation:  0xE32CAf987e97EdF4a2bB2948B12f0fF5B4EC76f1
+
+hooking up eternal storage to BridgeValidators
+pending txHash 0x4d934c75c42dfb438c7f21131ba2a941d8934cfd0540cf6922974ea161839d81
+
+initializing Foreign Bridge Validators with following parameters:
+
+REQUIRED_NUMBER_OF_VALIDATORS: 1, VALIDATORS: 0x371b627E0698DD758898Af271a0a2bB1bF9eCE26, VALIDATORS_OWNER: 0xb3A0dd42D027623B0aD2eBBA2300a2ffd69eC178
+pending txHash 0x046c56ac46dac2a57bc4736fb176c76f923a53ce713364341de33d3f8e045307
+
+Transferring ownership of ValidatorsProxy
+
+pending txHash 0x43808a659086e8f6fefe4313356d8a9e7cbd4c7ca0b8d2a35ceb5bec13b3e41e
+
+deploying ForeignAMBridge storage
+
+pending txHash 0xb6117272e972dad633ca8153424cd779011600f2ce764109f027dc8acac369c8
+It was not possible to verify 0x30156bd455dd0bb8b900907335d536dac2dbb206 in etherscan
+[Foreign] ForeignAMBridge Storage:  0x30156BD455dD0BB8B900907335d536daC2Dbb206
+
+deploying ForeignAMBridge implementation
+
+pending txHash 0xbe2b2db6ff270a7e55cd5ddad22bd47832c94aea54162bf22395d86997cf3d6d
+It was not possible to verify 0x7b0957f2f288af1b26e500c6995e13870deb5c6f in etherscan
+[Foreign] ForeignAMBridge Implementation:  0x7b0957f2F288Af1B26e500C6995e13870DeB5C6f
+
+hooking up ForeignAMBridge storage to ForeignAMBridge implementation
+pending txHash 0x5c204b4ef3894bf63592212f6caf810adcf6be88d7422221fe296d3dc1393c7c
+
+initializing Foreign Bridge with following parameters:
+
+
+initializing Foreign Bridge with following parameters:
+
+SOURCE_CHAIN_ID: 42, DESTINATION_CHAIN_ID: 3, Foreign Validators: 0xbE8cC31f1b4A96eDE0D2aAa4Bb789c424f225433,
+  FOREIGN_MAX_AMOUNT_PER_TX (gas limit per call): 2000000,
+  FOREIGN_GAS_PRICE: 10000000000, FOREIGN_REQUIRED_BLOCK_CONFIRMATIONS : 1
+  
+pending txHash 0xb9a8da5802eb2379e9a64a442a06bdd29994ca3fac752992d7fc8a8f0993958d
+transferring proxy ownership to multisig for Foreign bridge Proxy contract
+pending txHash 0x79dce9e5d063ef810f6b464f69269bc7eec1c459b75a21e6b83fcd0b21e87a2d
+
+Deployment of Arbitrary Message Bridge at Foreign completed
+
+
+Deployment has been completed.
+
+
+[   Home  ] HomeBridge: 0x30156BD455dD0BB8B900907335d536daC2Dbb206 at block 2309173
+[ Foreign ] ForeignBridge: 0x30156BD455dD0BB8B900907335d536daC2Dbb206 at block 21143378
+Contracts Deployment have been saved to `bridgeDeploymentResults.json`
+{
+    "homeBridge": {
+        "address": "0x30156BD455dD0BB8B900907335d536daC2Dbb206",
+        "deployedBlockNumber": 2309173
+    },
+    "foreignBridge": {
+        "address": "0x30156BD455dD0BB8B900907335d536daC2Dbb206",
+        "deployedBlockNumber": 21143378
+    }
+}
