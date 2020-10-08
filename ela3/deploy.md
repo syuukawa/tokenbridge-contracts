@@ -181,3 +181,30 @@ web3.sha3('executeAffirmation(bytes)')
 00050000b47b921f0ad0436a429993cdc56b46c441d7ac5700000000000000026307e265f22f6916492824c8cc963404debdbb73f35bec0416f261d4acdbbe6f8f65ee708ec1f2600007a1200101002a038b6c0354000000000000000000000000b3a0dd42d027623b0ad2ebba2300a2ffd69ec1780000000000000000000000000000000000000000000000000de0b6b3a76400000000000000000000000000
 
 
+
+
+nohup ./geth --datadir /root/eth/data \
+            —lightserv 1 \
+            --rpc --rpcvhosts '*' --rpcaddr "0.0.0.0" \
+            --rpcapi "eth,web3,admin,txpool" \
+            >>/root/eth/logs/geth.log 2>&1 &
+
+
+/root/ela/elastos-eth-v0.1.0
+
+
+
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":67}' http://118.190.57.207:8545 -H "content-type: application/json" 
+
+
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":67}' http://118.190.57.207:8545 -H "content-type: application/json"
+
+
+pm2 start --name testnet-geth -x ./geth -- --syncmode "full" --gcmode "archive" --rpc --rpcaddr "0.0.0.0" --rpcport "8545" --rpcapi "eth,admin,web3,net,debug,personal,txpool" --rpccorsdomain "*" -rpcvhosts="*" --nousb --ws --wsaddr "0.0.0.0" --wsport "8546" --wsorigins "*" --testnet --datadir "./data"
+
+
+
+wget -r -p -np -k https://download.elastos.org/elastos-eth/elastos-eth-v0.1.1/elastos-eth-v0.1.1-linux-x86_64.tgz
+
+
+tar -zxvf 
